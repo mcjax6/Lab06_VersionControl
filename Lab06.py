@@ -5,6 +5,9 @@ def encode(password):
     for x in password:
 
         temp = int(x) + 3
+        if temp > 9:
+            temp -= 10
+        
         encrypted = encrypted + str(temp)
 
     return encrypted
